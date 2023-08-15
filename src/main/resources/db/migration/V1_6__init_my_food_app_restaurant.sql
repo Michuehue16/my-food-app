@@ -15,6 +15,5 @@ create table restaurant
             references food_type (food_type_id),
     constraint fk_restaurant_delivery_address
         foreign key (delivery_address_id)
-            references delivery_address (delivery_address_id)
-
+            references delivery_address (delivery_address_id),
 );
