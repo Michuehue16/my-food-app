@@ -9,6 +9,5 @@ public class MyFoodAppApplication {
     public static void main(String[] args) {
         SpringApplication.run(MyFoodAppApplication.class, args);
     }
-    // TODO finish entities with relations in database
 
 }

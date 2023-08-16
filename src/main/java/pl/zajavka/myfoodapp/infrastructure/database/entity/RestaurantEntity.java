@@ -8,7 +8,7 @@ import java.util.Set;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "restaurantId")
-@ToString(of = {"restaurantId", "name", "addressId", "foodTypeId", "deliveryAddressId"})
+@ToString(of = {"restaurantId", "name", "address", "foodType"})
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,9 +26,9 @@ public class RestaurantEntity {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "address_id")
-    private AddressEntity addressId;
+    private AddressEntity address;
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_type_id")
-    private Set<FoodTypeEntity> foodTypeId;
+    private Set<FoodTypeEntity> foodType;
 }

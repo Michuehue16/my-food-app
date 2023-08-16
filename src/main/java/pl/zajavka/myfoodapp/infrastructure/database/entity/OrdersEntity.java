@@ -28,15 +28,6 @@ public class OrdersEntity {
     @Column(name = "is_done")
     private String isDone;
 
-    @Column(name = "restaurant_id")
-    private Integer restaurantId;
-
-    @Column(name = "customer_id")
-    private Integer customerId;
-
-    @Column(name = "food_name_id")
-    private Integer foodNameId;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id")
     private RestaurantEntity restaurant;
