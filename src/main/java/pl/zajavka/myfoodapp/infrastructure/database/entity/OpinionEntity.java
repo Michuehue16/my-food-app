@@ -30,4 +30,12 @@ public class OpinionEntity {
 
     @Column(name = "comment")
     private String comment;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id")
+    private CustomerEntity customer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "restaurant_id")
+    private CustomerEntity restaurant;
 }

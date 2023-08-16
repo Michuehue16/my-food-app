@@ -3,6 +3,7 @@ package pl.zajavka.myfoodapp.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -42,4 +43,7 @@ public class CustomerEntity {
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "customer")
     private Set<OrdersEntity> orders;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "customer")
+    private List<OpinionEntity> opinions;
 }

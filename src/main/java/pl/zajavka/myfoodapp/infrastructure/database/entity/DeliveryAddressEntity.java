@@ -22,5 +22,7 @@ public class DeliveryAddressEntity {
     @Column(name = "street")
     private String street;
 
-//    @ManyToMany(fetch = FetchType.EAGER, )
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "restaurant_id")
+    private RestaurantEntity restaurant;
 }

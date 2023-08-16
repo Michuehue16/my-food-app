@@ -3,6 +3,8 @@ package pl.zajavka.myfoodapp.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @EqualsAndHashCode(of = "restaurantId")
@@ -22,12 +24,11 @@ public class RestaurantEntity {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "address_id")
-    private Integer addressId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "address_id")
+    private AddressEntity addressId;
 
-    @Column(name = "food_type_id")
-    private Integer foodTypeId;
-
-    @Column(name = "delivery_address_id")
-    private Integer deliveryAddressId;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "food_type_id")
+    private Set<FoodTypeEntity> foodTypeId;
 }
