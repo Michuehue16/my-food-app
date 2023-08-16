@@ -35,7 +35,7 @@ public class FoodNameEntity {
     @JoinColumn(name = "food_type_id")
     private FoodTypeEntity foodType;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "orders_id")
     private List<OrdersEntity> orders;
 }

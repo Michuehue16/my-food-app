@@ -1,0 +1,9 @@
+package pl.zajavka.myfoodapp.business;
+
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@AllArgsConstructor
+public class DeliveryAddressService {
+}
