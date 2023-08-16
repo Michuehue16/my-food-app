@@ -31,5 +31,5 @@ public class OpinionEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id")
-    private CustomerEntity restaurant;
+    private RestaurantEntity restaurant;
 }

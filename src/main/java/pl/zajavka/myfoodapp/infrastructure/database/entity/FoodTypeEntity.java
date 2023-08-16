@@ -8,7 +8,7 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "foodTypeId")
-@ToString(of = {"name", "price", "description"})
+@ToString(of = {"name"})
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,12 +23,6 @@ public class FoodTypeEntity {
 
     @Column(name = "name")
     private String name;
-
-    @Column(name = "price")
-    private String price;
-
-    @Column(name = "description")
-    private String description;
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_name_id")
