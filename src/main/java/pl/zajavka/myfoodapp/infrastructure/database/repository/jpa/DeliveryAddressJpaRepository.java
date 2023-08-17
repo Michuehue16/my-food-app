@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pl.zajavka.myfoodapp.infrastructure.database.entity.DeliveryAddressEntity;
 
 @Repository
-public interface DeliveryAddressEntityRepository extends JpaRepository<DeliveryAddressEntity, Integer> {
+public interface DeliveryAddressJpaRepository extends JpaRepository<DeliveryAddressEntity, Integer> {
 }

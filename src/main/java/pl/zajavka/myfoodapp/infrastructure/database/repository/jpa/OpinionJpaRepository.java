@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pl.zajavka.myfoodapp.infrastructure.database.entity.OpinionEntity;
 
 @Repository
-public interface OpinionEntityRepository extends JpaRepository<OpinionEntity, Integer> {
+public interface OpinionJpaRepository extends JpaRepository<OpinionEntity, Integer> {
 }
